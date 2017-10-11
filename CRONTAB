@@ -1,0 +1,2 @@
+#example crontab
+33 5 * * 6 cd /var/opt/dwca-downloads; ./dwca-download.sh >> /var/log/dwca-download/dwca-download.log
