@@ -2,7 +2,7 @@
 
 date
 
-SERVER_ADDR_FILE=/var/www/drupal/sites/default/files/nbabase.txt
+SERVER_ADDR_FILE=/tmp/nbabase.txt
 
 if [ ! -f $SERVER_ADDR_FILE ]; then
   echo "$SERVER_ADDR_FILE not found"
