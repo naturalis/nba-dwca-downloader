@@ -10,7 +10,7 @@ if [ ! -f $SERVER_ADDR_FILE ]; then
   exit
 fi
 
-SERVER=$(cat $SERVER_ADDR_FILE | sed -e 's/\/v2//')
+SERVER=$(cat $SERVER_ADDR_FILE | sed -e 's/\/v2\///')
 OUTDIR=downloads
 
 datestamp() {
