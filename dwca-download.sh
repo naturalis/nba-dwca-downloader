@@ -2,15 +2,17 @@
 
 date
 
-SERVER_ADDR_FILE=/tmp/nbabase.txt
+#SERVER_ADDR_FILE=/tmp/nbabase.txt
 #SERVER_ADDR_FILE=/var/www/drupal/sites/default/files/nbabase.txt
 
-if [ ! -f $SERVER_ADDR_FILE ]; then
-  echo "$SERVER_ADDR_FILE not found"
-  exit
-fi
+#if [ ! -f $SERVER_ADDR_FILE ]; then
+#  echo "$SERVER_ADDR_FILE not found"
+#  exit
+#fi
 
-SERVER=$(cat $SERVER_ADDR_FILE | sed -e 's/\/v2[/]*//')
+#SERVER=$(cat $SERVER_ADDR_FILE | sed -e 's/\/v2[/]*//')
+
+SERVER=http://api.biodiversitydata.nl
 OUTDIR=downloads
 
 datestamp() {
