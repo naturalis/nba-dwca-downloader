@@ -23,6 +23,10 @@ OUT=$(curl -s -XGET $SERVER/v2/specimen/dwca/getDataSetNames)
 NAMES=$(echo  $OUT | python3 data_set_names.py)
 
 for i in $NAMES; do
+        if [[ "$i" = "birdsounds" && "$i" = "observations" ]]; then
+                echo "skipping $i"
+                continue
+        fi
         echo "downloading $i"
         curl -o ${OUTDIR}/tmp-${i}-`datestamp`.dwca.zip.part $SERVER/v2/specimen/dwca/getDataSet/$i
         echo "deleting previous ${i} download"
