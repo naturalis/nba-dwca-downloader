@@ -23,7 +23,7 @@ OUT=$(curl -s -XGET $SERVER/v2/specimen/dwca/getDataSetNames)
 NAMES=$(echo  $OUT | python3 data_set_names.py)
 
 for i in $NAMES; do
-        if [[ "$i" = "birdsounds" && "$i" = "observations" ]]; then
+        if [[ "$i" = "birdsounds" || "$i" = "observations" ]]; then
                 echo "skipping $i"
                 continue
         fi
