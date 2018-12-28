@@ -12,7 +12,7 @@ date
 
 #SERVER=$(cat $SERVER_ADDR_FILE | sed -e 's/\/v2[/]*//')
 
-SERVER=http://api.biodiversitydata.nl
+SERVER=https://api.biodiversitydata.nl
 OUTDIR=downloads
 
 datestamp() {
